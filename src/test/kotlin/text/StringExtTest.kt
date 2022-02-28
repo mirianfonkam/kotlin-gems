@@ -34,4 +34,17 @@ class StringExtTest {
         assertEquals("United", testCase2[0 until 6])
         assertEquals("States", testCase2[7.rangeTo(12)])
     }
+
+    @Test
+    fun timesOperator(){
+        // Given
+        val testCase1 = "Hi!"
+        val testCase2 = "_ "
+
+        // Then
+        assertEquals("Hi!Hi!Hi!", testCase1 * 3)
+        assertEquals("Hi!", testCase1 * 1)
+        assertEquals("", testCase1 * 0)
+        assertEquals("_ _ _ _ _ ", testCase2 * 5)
+    }
 }

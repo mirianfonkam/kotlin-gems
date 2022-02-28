@@ -1,7 +1,8 @@
-import text.get
+import text.times
 
 fun main() {
-    val string = "Hello, World!"
-    println(string[0..2])
-    println(string.get(string.indices))
+    val str = "Hello World!"
+    println(str * 3)
 }
+
+
