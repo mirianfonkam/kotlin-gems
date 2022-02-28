@@ -1,5 +1,7 @@
-import text.count
+import text.get
 
 fun main() {
-    println("Hello World!".count("o"))
+    val string = "Hello, World!"
+    println(string[0..2])
+    println(string.get(string.indices))
 }
