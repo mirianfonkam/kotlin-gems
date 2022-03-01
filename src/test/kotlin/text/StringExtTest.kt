@@ -19,7 +19,7 @@ class StringExtTest {
         assertEquals(2, testCase1.count("o"))
         assertEquals(0, testCase1.count("z"))
         assertEquals(6, testCase2.count("oi"))
-        assertEquals( 4, testCase3.count("line"))
+        assertEquals(4, testCase3.count("line"))
     }
 
     @Test
