@@ -1,8 +1,7 @@
-import text.times
+import number.isZero
 
 fun main() {
-    val str = "Hello World!"
-    println(str * 3)
+    println(78768.isZero())
 }
 
 

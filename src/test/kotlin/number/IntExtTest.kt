@@ -1,5 +1,6 @@
 package number
 
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -34,5 +35,31 @@ class IntExtTest {
         assertTrue(oddTestCase2.isOdd())
         assertTrue(oddTestCase3.isOdd())
         assertFalse(evenTestCase.isOdd())
+    }
+
+    @Test
+    fun toDigits(){
+        // Given
+        val testCase1 = 78768
+        val testCase2 = -10
+        val testCase3 = 0
+
+        // When
+        assertEquals(listOf(7,8,7,6,8),testCase1.toDigits())
+        assertEquals(listOf(1,0),testCase2.toDigits())
+        assertEquals(listOf(0),testCase3.toDigits())
+    }
+
+    @Test
+    fun isZero(){
+        // Given
+        val zeroTestCase = 0
+        val nonZeroTestCase1 = 99999999
+        val nonZeroTestCase2 = -1
+
+        // When
+        assertTrue(zeroTestCase.isZero())
+        assertFalse(nonZeroTestCase1.isZero())
+        assertFalse(nonZeroTestCase2.isZero())
     }
 }

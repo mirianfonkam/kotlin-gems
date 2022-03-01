@@ -25,7 +25,6 @@ operator fun String.get(indices: IntRange): String {
     return this.slice(indices)
 }
 
-
 /**
  * It simplifies the repetition of a string using the times operator.
  *
