@@ -49,17 +49,4 @@ class IntExtTest {
         assertEquals(listOf(1,0),testCase2.toDigits())
         assertEquals(listOf(0),testCase3.toDigits())
     }
-
-    @Test
-    fun isZero(){
-        // Given
-        val zeroTestCase = 0
-        val nonZeroTestCase1 = 99999999
-        val nonZeroTestCase2 = -1
-
-        // When
-        assertTrue(zeroTestCase.isZero())
-        assertFalse(nonZeroTestCase1.isZero())
-        assertFalse(nonZeroTestCase2.isZero())
-    }
 }

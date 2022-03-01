@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "me.user"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -32,7 +32,7 @@ tasks.withType<DokkaTask>().configureEach {
     outputDirectory.set(file("docs"))
     dokkaSourceSets {
         named("main") {
-            moduleName.set("Kotlin Gems Doc")
+            moduleName.set("Kotlin Gems Docs")
             sourceLink {
                 localDirectory.set(file("src/main/kotlin"))
                 remoteUrl.set(URL("https://github.com/mirianfonkam/kotlin-gems/tree/master/src/main/kotlin"))

@@ -27,12 +27,5 @@ fun Int.toDigits(): List<Int> {
     return abs(this).toString().map { it.digitToInt() }
 }
 
-/**
- * It determines whether the specified integer is equal to zero.
- *
- * @return true if the specified integer has a zero value.
- */
-fun Int.isZero(): Boolean = this == 0
-
 
 
