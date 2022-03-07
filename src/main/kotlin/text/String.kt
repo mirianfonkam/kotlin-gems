@@ -15,7 +15,7 @@ fun String.count(substring: String): Int {
  * It simplifies the slicing of a string using the bracket notation.
  *
  * @param [indices] the range of indices to be used for slicing.
- * @return a string containing characters of the original string at the specified range of indices.
+ * @return a string containing characters of the original string with the specified range of indices.
  */
 operator fun String.get(indices: Iterable<Int>): String {
     return this.slice(indices)

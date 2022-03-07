@@ -1,52 +1,59 @@
 package number
 
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertFalse
-import org.junit.Assert.assertTrue
-import org.junit.Test
+import io.kotest.core.spec.style.DescribeSpec
+import io.kotest.inspectors.forAll
+import io.kotest.matchers.booleans.shouldBeFalse
+import io.kotest.matchers.booleans.shouldBeTrue
+import io.kotest.matchers.shouldBe
 
-class IntExtTest {
+class IntExtTest : DescribeSpec({
 
-    @Test
-    fun isEven() {
-        // Given
-        val evenTestCase1 = 40004
-        val evenTestCase2 = -10
-        val evenTestCase3 = 0
-        val oddTestCase = 111
+    describe("isEven") {
+        val evenList = listOf(40004, -10, 0)
+        val oddList = listOf(1, -1, 111, 45)
 
-        // When
-        assertTrue(evenTestCase1.isEven())
-        assertTrue(evenTestCase2.isEven())
-        assertTrue(evenTestCase3.isEven())
-        assertFalse(oddTestCase.isEven())
+        it("returns true for even integers") {
+            evenList.forAll { it.isEven().shouldBeTrue() }
+        }
+        it("returns false for non-even/odd integers") {
+            oddList.forAll { it.isEven().shouldBeFalse() }
+        }
     }
 
-    @Test
-    fun isOdd() {
-        // Given
-        val oddTestCase1 = 111
-        val oddTestCase2 = 35
-        val oddTestCase3 = -1
-        val evenTestCase = 40004
+    describe("isOdd") {
+        val oddList = listOf(-1, 35, 111)
+        val evenList = listOf(40004, 2,  -10, 0)
 
-        // When
-        assertTrue(oddTestCase1.isOdd())
-        assertTrue(oddTestCase2.isOdd())
-        assertTrue(oddTestCase3.isOdd())
-        assertFalse(evenTestCase.isOdd())
+        it("returns true for odd integers") {
+            oddList.forAll { it.isOdd().shouldBeTrue() }
+        }
+        it("returns false for non-odd/even integers") {
+            evenList.forAll { it.isOdd().shouldBeFalse() }
+        }
     }
 
-    @Test
-    fun toDigits(){
-        // Given
-        val testCase1 = 78768
-        val testCase2 = -10
-        val testCase3 = 0
-
-        // When
-        assertEquals(listOf(7,8,7,6,8),testCase1.toDigits())
-        assertEquals(listOf(1,0),testCase2.toDigits())
-        assertEquals(listOf(0),testCase3.toDigits())
+    describe("toDigits") {
+        it("converts an integer into a list of digits") {
+            listOf(
+                123 to listOf(1, 2, 3),
+                -123 to listOf(1, 2, 3),
+                0 to listOf(0),
+                78768 to listOf(7, 8, 7, 6, 8)
+            ).forEach { (integer: Int, listOfDigits: List<Int>) ->
+                integer.toDigits() shouldBe listOfDigits
+            }
+        }
     }
-}
+
+    describe("isPrime") {
+        val primeList = listOf(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47)
+        val nonPrimeList = (0..50).filterNot { it in primeList }
+
+        it("returns true for prime integers") {
+            primeList.forAll { it.isPrime().shouldBeTrue() }
+        }
+        it("returns false for non prime integers") {
+            nonPrimeList.forAll { it.isPrime().shouldBeFalse() }
+        }
+    }
+})

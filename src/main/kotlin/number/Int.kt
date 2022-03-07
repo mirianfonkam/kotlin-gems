@@ -27,5 +27,11 @@ fun Int.toDigits(): List<Int> {
     return abs(this).toString().map { it.digitToInt() }
 }
 
-
-
+/**
+ * It determines whether the specified integer is a [prime number](https://en.wikipedia.org/wiki/Prime_number).
+ *
+ * @return true if the specified integer is a prime number.
+ */
+fun Int.isPrime() : Boolean {
+   return this > 1 && (2..(this / 2)).none { this % it == 0 }
+}

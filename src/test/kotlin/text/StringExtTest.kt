@@ -1,50 +1,52 @@
-package text
 
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import io.kotest.core.spec.style.DescribeSpec
+import io.kotest.data.blocking.forAll
+import io.kotest.data.row
+import io.kotest.matchers.shouldBe
+import text.count
+import text.get
+import text.times
 
-class StringExtTest {
+class StringExtTest : DescribeSpec({
 
-    @Test
-    fun count() {
-        // Given
-        val testCase1 = "foo"
-        val testCase2 = "oioioi oioioi vamos dancar"
-        val testCase3 = """First line
+    describe("count") {
+        it("should return the frequency of a substring in a text") {
+            forAll(
+                row("foo", "o", 2),
+                row("oioioi oioioi", "oi", 6),
+                row("""First line
                                Second line
                                Third line
-                               Fourth line"""
-
-        // Then
-        assertEquals(2, testCase1.count("o"))
-        assertEquals(0, testCase1.count("z"))
-        assertEquals(6, testCase2.count("oi"))
-        assertEquals(4, testCase3.count("line"))
+                               Fourth line""", "line", 4),
+                row("Kotlin", "j", 0),
+            ) {text: String, substring: String, countResult: Int ->
+                text.count(substring) shouldBe countResult
+            }
+        }
     }
 
-    @Test
-    fun getOperator(){
-        // Given
-        val testCase1 = "Hello World"
-        val testCase2 = "United States of America"
+    describe("getOperator") {
+        it("slices the string with the specified range of indices.") {
+            val stringTest1 = "Hello World"
+            val stringTest2 = "United States of America"
 
-        // Then
-        assertEquals("World", testCase1[6..(testCase1.length - 1)])
-        assertEquals("olleH", testCase1[4 downTo 0])
-        assertEquals("United", testCase2[0 until 6])
-        assertEquals("States", testCase2[7.rangeTo(12)])
+            stringTest1[6..(stringTest1.length - 1)] shouldBe "World"
+            stringTest1[4 downTo 0] shouldBe "olleH"
+            stringTest2[0 until 6] shouldBe "United"
+            stringTest2[7.rangeTo(12)] shouldBe "States"
+        }
     }
 
-    @Test
-    fun timesOperator(){
-        // Given
-        val testCase1 = "Hi!"
-        val testCase2 = "_ "
-
-        // Then
-        assertEquals("Hi!Hi!Hi!", testCase1 * 3)
-        assertEquals("Hi!", testCase1 * 1)
-        assertEquals("", testCase1 * 0)
-        assertEquals("_ _ _ _ _ ", testCase2 * 5)
+    describe("timesOperator") {
+        it("repeats the string the specified number of times.") {
+            forAll(
+                row("Hi!", 3, "Hi!Hi!Hi!"),
+                row("Kotlin", 1, "Kotlin"),
+                row("_ ", 5, "_ _ _ _ _ "),
+                row("Java", 0, ""),
+            ) {text: String, multiplier: Int, textResult: String ->
+                text * multiplier shouldBe textResult
+            }
+        }
     }
-}
+})

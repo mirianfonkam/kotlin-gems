@@ -1,5 +1,11 @@
+import text.get
+
+/**
+ * @suppress
+ */
 fun main() {
-    println(0.2)
+    val testCase1 = "Hello World"
+
+    // Then
+    println(testCase1[6..(testCase1.length - 1)])
 }
-
-
