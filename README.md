@@ -2,7 +2,7 @@
 
 #### 💎 Making Kotlin more Ruby-like
 Ruby is a language "_optimized for programmer happiness_”. Kotlin is “_a modern programming language that makes developers happier_.”
-As similar as these slogans sound, they are some striking differences between the two languages. This project aims to combine the best features of Ruby and Kotlin, and make Kotlin more Ruby-like.
+As similar as these slogans sound, there are some striking differences between the two languages. This project aims to combine the best features of Ruby and Kotlin, and make Kotlin a little bit more Ruby-like.
 
 Kotlin Gems is a collection of Kotlin extensions that we wish were built into Kotlin's standard library.
 
