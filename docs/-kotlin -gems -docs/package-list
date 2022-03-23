@@ -9,11 +9,15 @@ $dokka.location:number//isPositive/kotlin.Number#/PointingToDeclaration/-kotlin
 $dokka.location:number//isPrime/kotlin.Int#/PointingToDeclaration/-kotlin -gems -docs/number/is-prime.html
 $dokka.location:number//isZero/kotlin.Number#/PointingToDeclaration/-kotlin -gems -docs/number/is-zero.html
 $dokka.location:number//toDigits/kotlin.Int#/PointingToDeclaration/-kotlin -gems -docs/number/to-digits.html
+$dokka.location:object////PointingToDeclaration/-kotlin -gems -docs/object/index.html
+$dokka.location:object//isNotNull/kotlin.Any?#/PointingToDeclaration/-kotlin -gems -docs/object/is-not-null.html
+$dokka.location:object//isNull/kotlin.Any?#/PointingToDeclaration/-kotlin -gems -docs/object/is-null.html
 $dokka.location:text////PointingToDeclaration/-kotlin -gems -docs/text/index.html
 $dokka.location:text//count/kotlin.String#kotlin.String/PointingToDeclaration/-kotlin -gems -docs/text/count.html
 $dokka.location:text//get/kotlin.String#kotlin.collections.Iterable[kotlin.Int]/PointingToDeclaration/-kotlin -gems -docs/text/get.html
 $dokka.location:text//get/kotlin.String#kotlin.ranges.IntRange/PointingToDeclaration/-kotlin -gems -docs/text/get.html
 $dokka.location:text//times/kotlin.String#kotlin.Int/PointingToDeclaration/-kotlin -gems -docs/text/times.html
 number
+object
 text
 
