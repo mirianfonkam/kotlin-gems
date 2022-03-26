@@ -25,9 +25,3 @@ jobs:
       - name: Generate API documentation
         if: ${{github.event_name == 'push'}}
         run: ./gradlew dokkaHtml
-      - name: Deploy API documentation to Github Pages
-        if: ${{github.event_name == 'push'}}
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
-        with:
-          BRANCH: gh-pages
-          FOLDER: docs
