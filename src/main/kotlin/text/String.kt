@@ -10,6 +10,19 @@ fun String.count(substring: String): Int {
     return this.split(substring).size - 1
 }
 
+/**
+ * It makes a copy of the string with all occurrences the matching [substrings] arguments deleted.
+ *
+ * @param [substrings] the substrings to be deleted.
+ * @return a copy of the string with all occurrences of the specified substrings deleted.
+ */
+fun String.delete(vararg substrings: String): String {
+    var copy = this
+    substrings.forEach {
+        copy = copy.replace(it, "")
+    }
+    return copy
+}
 
 /**
  * It simplifies the slicing of a string using the bracket notation.

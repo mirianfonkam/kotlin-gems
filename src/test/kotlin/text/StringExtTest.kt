@@ -4,6 +4,7 @@ import io.kotest.data.blocking.forAll
 import io.kotest.data.row
 import io.kotest.matchers.shouldBe
 import text.count
+import text.delete
 import text.get
 import text.times
 
@@ -24,6 +25,25 @@ class StringExtTest : DescribeSpec({
             }
         }
     }
+
+    describe("delete") {
+        it("should delete all the occurrences of the matching substrings in a text") {
+            forAll(
+                row("I am, Sara", ",", "I am Sara"),
+                row("Lorem ipsum dolor", " ", "Loremipsumdolor"),
+                row("Java", "kt", "Java"),
+                row("hello", "lo", "hel"),
+            ) {text: String, substring: String, result: String ->
+                text.delete(substring) shouldBe result
+            }
+            "hello".delete("l","lo") shouldBe "heo"
+            "abcdefghijklmnopqrstuvwxyz".delete("a", "e", "i", "o", "u") shouldBe "bcdfghjklmnpqrstvwxyz"
+        }
+
+    }
+
+    val text = "Lorem Ipso dolor"
+
 
     describe("getOperator") {
         it("slices the string with the specified range of indices.") {

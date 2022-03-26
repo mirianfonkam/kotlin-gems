@@ -14,6 +14,7 @@ $dokka.location:object//isNotNull/kotlin.Any?#/PointingToDeclaration/-kotlin -g
 $dokka.location:object//isNull/kotlin.Any?#/PointingToDeclaration/-kotlin -gems -docs/object/is-null.html
 $dokka.location:text////PointingToDeclaration/-kotlin -gems -docs/text/index.html
 $dokka.location:text//count/kotlin.String#kotlin.String/PointingToDeclaration/-kotlin -gems -docs/text/count.html
+$dokka.location:text//delete/kotlin.String#kotlin.Array[kotlin.String]/PointingToDeclaration/-kotlin -gems -docs/text/delete.html
 $dokka.location:text//get/kotlin.String#kotlin.collections.Iterable[kotlin.Int]/PointingToDeclaration/-kotlin -gems -docs/text/get.html
 $dokka.location:text//get/kotlin.String#kotlin.ranges.IntRange/PointingToDeclaration/-kotlin -gems -docs/text/get.html
 $dokka.location:text//times/kotlin.String#kotlin.Int/PointingToDeclaration/-kotlin -gems -docs/text/times.html
