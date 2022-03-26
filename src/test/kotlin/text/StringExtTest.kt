@@ -42,9 +42,6 @@ class StringExtTest : DescribeSpec({
 
     }
 
-    val text = "Lorem Ipso dolor"
-
-
     describe("getOperator") {
         it("slices the string with the specified range of indices.") {
             val stringTest1 = "Hello World"
