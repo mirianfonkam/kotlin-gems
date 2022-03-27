@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="object.AnyExtTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-27T01:57:30" hostname="fv-az213-608" time="0.011">
-  <properties/>
-  <testcase name="should be able to check if an object is null" classname="object.AnyExtTest" time="0.003"/>
-  <testcase name="should be able to check if an object is not null" classname="object.AnyExtTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
