@@ -3,6 +3,7 @@ import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.data.blocking.forAll
 import io.kotest.data.row
 import io.kotest.matchers.shouldBe
+import text.capitalized
 import text.count
 import text.delete
 import text.get
@@ -75,6 +76,18 @@ class StringExtTest : DescribeSpec({
                 row("cYbEr_PuNk11", "CyBeR_pUnK11")
             ) {text: String, result: String ->
                 text.swapcase() shouldBe result
+            }
+        }
+    }
+
+    describe("capitalized") {
+        it("should make the first char of a string uppercase") {
+            forAll(
+                row("money", "Money"),
+                row("ruby is also great", "Ruby is also great"),
+                row("","")
+            ) {text: String, result: String ->
+                text.capitalized() shouldBe result
             }
         }
     }

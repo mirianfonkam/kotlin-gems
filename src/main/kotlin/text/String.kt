@@ -1,5 +1,7 @@
 package text
 
+import java.util.*
+
 /**
  * It counts the occurrences of a given substring in a text.
  *
@@ -49,12 +51,20 @@ operator fun String.times(n: Int): String {
 }
 
 /**
- *  It makes a copy of a string with uppercase alphabetic characters converted to lowercase and lowercase characters converted to uppercase.
- *  The case of non-alphabetic characters is not changed.
- *  @return a copy of the string with the characters converted to the opposite case.
+ * It makes a copy of a string with uppercase alphabetic characters converted to lowercase and lowercase characters converted to uppercase.
+ * The case of non-alphabetic characters is not changed.
+ * @return a copy of the string with the characters converted to the opposite case.
  */
 fun String.swapcase(): String {
     return this.map {
         if (it.isUpperCase()) it.lowercase() else it.uppercase()
     }.joinToString("")
+}
+
+/**
+ * It makes a copy of a string with the first character converted to uppercase.
+ * @return a copy of the string capitalized
+ */
+fun String.capitalized(): String {
+    return replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
 }
