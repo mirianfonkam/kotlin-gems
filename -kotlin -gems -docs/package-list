@@ -1,0 +1,25 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:number////PointingToDeclaration/-kotlin -gems -docs/number/index.html
+$dokka.location:number//compareTo/kotlin.Number#kotlin.Int/PointingToDeclaration/-kotlin -gems -docs/number/compare-to.html
+$dokka.location:number//isEven/kotlin.Int#/PointingToDeclaration/-kotlin -gems -docs/number/is-even.html
+$dokka.location:number//isNegative/kotlin.Number#/PointingToDeclaration/-kotlin -gems -docs/number/is-negative.html
+$dokka.location:number//isOdd/kotlin.Int#/PointingToDeclaration/-kotlin -gems -docs/number/is-odd.html
+$dokka.location:number//isPositive/kotlin.Number#/PointingToDeclaration/-kotlin -gems -docs/number/is-positive.html
+$dokka.location:number//isPrime/kotlin.Int#/PointingToDeclaration/-kotlin -gems -docs/number/is-prime.html
+$dokka.location:number//isZero/kotlin.Number#/PointingToDeclaration/-kotlin -gems -docs/number/is-zero.html
+$dokka.location:number//toDigits/kotlin.Int#/PointingToDeclaration/-kotlin -gems -docs/number/to-digits.html
+$dokka.location:object////PointingToDeclaration/-kotlin -gems -docs/object/index.html
+$dokka.location:object//isNotNull/kotlin.Any?#/PointingToDeclaration/-kotlin -gems -docs/object/is-not-null.html
+$dokka.location:object//isNull/kotlin.Any?#/PointingToDeclaration/-kotlin -gems -docs/object/is-null.html
+$dokka.location:text////PointingToDeclaration/-kotlin -gems -docs/text/index.html
+$dokka.location:text//count/kotlin.String#kotlin.String/PointingToDeclaration/-kotlin -gems -docs/text/count.html
+$dokka.location:text//delete/kotlin.String#kotlin.Array[kotlin.String]/PointingToDeclaration/-kotlin -gems -docs/text/delete.html
+$dokka.location:text//get/kotlin.String#kotlin.collections.Iterable[kotlin.Int]/PointingToDeclaration/-kotlin -gems -docs/text/get.html
+$dokka.location:text//get/kotlin.String#kotlin.ranges.IntRange/PointingToDeclaration/-kotlin -gems -docs/text/get.html
+$dokka.location:text//swapcase/kotlin.String#/PointingToDeclaration/-kotlin -gems -docs/text/swapcase.html
+$dokka.location:text//times/kotlin.String#kotlin.Int/PointingToDeclaration/-kotlin -gems -docs/text/times.html
+number
+object
+text
+
