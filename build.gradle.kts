@@ -31,6 +31,7 @@ tasks.withType<KotlinCompile>() {
 }
 
 tasks.withType<DokkaTask>().configureEach {
+    outputDirectory.set(file("build/docs"))
     dokkaSourceSets {
         named("main") {
             moduleName.set("Kotlin Gems Docs")
