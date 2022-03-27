@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="StringExtTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-03-27T01:57:30" hostname="fv-az213-608" time="0.11">
+  <properties/>
+  <testcase name="should return the frequency of a substring in a text" classname="StringExtTest" time="0.046"/>
+  <testcase name="should delete all the occurrences of the matching substrings in a text" classname="StringExtTest" time="0.003"/>
+  <testcase name="slices the string with the specified range of indices." classname="StringExtTest" time="0.002"/>
+  <testcase name="repeats the string the specified number of times." classname="StringExtTest" time="0.003"/>
+  <testcase name="should letter swap the case of the characters in the string" classname="StringExtTest" time="0.009"/>
+  <testcase name="should make the first char of a string uppercase" classname="StringExtTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

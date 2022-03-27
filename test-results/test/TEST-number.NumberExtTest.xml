@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="number.NumberExtTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2022-03-27T01:57:30" hostname="fv-az213-608" time="0.059">
+  <properties/>
+  <testcase name="returns 1 when the left hand side number is greater than the right hand side integer" classname="number.NumberExtTest" time="0.001"/>
+  <testcase name="returns -1 when the left hand side number is less than the right hand side integer" classname="number.NumberExtTest" time="0.0"/>
+  <testcase name="returns 0 when the left hand side number is equal to the right hand side integer" classname="number.NumberExtTest" time="0.001"/>
+  <testcase name="returns true when the left hand side number is less than the right hand side integer" classname="number.NumberExtTest" time="0.0"/>
+  <testcase name="returns false when the left hand side number is not less than the right hand side integer" classname="number.NumberExtTest" time="0.001"/>
+  <testcase name="returns true when the left hand side number is greater than the right hand side integer" classname="number.NumberExtTest" time="0.001"/>
+  <testcase name="returns false when the left hand side number is not greater than the right hand side integer" classname="number.NumberExtTest" time="0.002"/>
+  <testcase name="returns true if number is positive" classname="number.NumberExtTest" time="0.001"/>
+  <testcase name="returns false for non-positive/negative numbers" classname="number.NumberExtTest" time="0.001"/>
+  <testcase name="returns true if number is negative" classname="number.NumberExtTest" time="0.002"/>
+  <testcase name="returns false for non-negative/positive numbers" classname="number.NumberExtTest" time="0.001"/>
+  <testcase name="returns true if number is zero" classname="number.NumberExtTest" time="0.003"/>
+  <testcase name="returns false for non-zero numbers" classname="number.NumberExtTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
