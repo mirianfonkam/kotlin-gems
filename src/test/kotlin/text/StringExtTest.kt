@@ -6,6 +6,7 @@ import io.kotest.matchers.shouldBe
 import text.count
 import text.delete
 import text.get
+import text.swapcase
 import text.times
 
 class StringExtTest : DescribeSpec({
@@ -63,6 +64,17 @@ class StringExtTest : DescribeSpec({
                 row("Java", 0, ""),
             ) {text: String, multiplier: Int, textResult: String ->
                 text * multiplier shouldBe textResult
+            }
+        }
+    }
+
+    describe("swapcase") {
+        it("should letter swap the case of the characters in the string") {
+            forAll(
+                row("Hello World", "hELLO wORLD"),
+                row("cYbEr_PuNk11", "CyBeR_pUnK11")
+            ) {text: String, result: String ->
+                text.swapcase() shouldBe result
             }
         }
     }

@@ -47,3 +47,14 @@ operator fun String.get(indices: IntRange): String {
 operator fun String.times(n: Int): String {
     return this.repeat(n)
 }
+
+/**
+ *  It makes a copy of a string with uppercase alphabetic characters converted to lowercase and lowercase characters converted to uppercase.
+ *  The case of non-alphabetic characters is not changed.
+ *  @return a copy of the string with the characters converted to the opposite case.
+ */
+fun String.swapcase(): String {
+    return this.map {
+        if (it.isUpperCase()) it.lowercase() else it.uppercase()
+    }.joinToString("")
+}
