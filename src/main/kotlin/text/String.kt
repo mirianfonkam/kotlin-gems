@@ -41,7 +41,7 @@ operator fun String.get(indices: IntRange): String {
 }
 
 /**
- * It simplifies the repetition of a string using the times operator.
+ * It simplifies the repetition of a string using the times(*) operator.
  *
  * @param [n] the number of times the string should be repeated.
  * @return a string containing the original string repeated the specified number of times.
@@ -67,4 +67,13 @@ fun String.swapcase(): String {
  */
 fun String.capitalized(): String {
     return replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+}
+
+/**
+ * It inserts the given [otherString] into this string at the specified index.
+ * @return a new string with the [otherString] inserted into this.
+ * @throws StringIndexOutOfBoundsException if index < 0
+ */
+fun String.insert(index: Int, otherString: String): String {
+    return this.substring(0, index) + otherString + this.substring(index)
 }

@@ -7,6 +7,7 @@ import text.capitalized
 import text.count
 import text.delete
 import text.get
+import text.insert
 import text.swapcase
 import text.times
 
@@ -88,6 +89,18 @@ class StringExtTest : DescribeSpec({
                 row("","")
             ) {text: String, result: String ->
                 text.capitalized() shouldBe result
+            }
+        }
+    }
+
+    describe("insert") {
+        it("should insert the given otherString into this string"){
+            forAll(
+                row("Messi and Neymar scored", 5, ", Mbappe", "Messi, Mbappe and Neymar scored"),
+                row("foo", 1, "bar", "fbaroo"),
+                row("GitHub", 6, " Actions", "GitHub Actions"),
+            ) {text: String, index: Int, otherString: String, result: String ->
+                text.insert(index, otherString) shouldBe result
             }
         }
     }
