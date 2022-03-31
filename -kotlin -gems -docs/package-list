@@ -18,6 +18,7 @@ $dokka.location:text//count/kotlin.String#kotlin.String/PointingToDeclaration/-
 $dokka.location:text//delete/kotlin.String#kotlin.Array[kotlin.String]/PointingToDeclaration/-kotlin -gems -docs/text/delete.html
 $dokka.location:text//get/kotlin.String#kotlin.collections.Iterable[kotlin.Int]/PointingToDeclaration/-kotlin -gems -docs/text/get.html
 $dokka.location:text//get/kotlin.String#kotlin.ranges.IntRange/PointingToDeclaration/-kotlin -gems -docs/text/get.html
+$dokka.location:text//insert/kotlin.String#kotlin.Int#kotlin.String/PointingToDeclaration/-kotlin -gems -docs/text/insert.html
 $dokka.location:text//swapcase/kotlin.String#/PointingToDeclaration/-kotlin -gems -docs/text/swapcase.html
 $dokka.location:text//times/kotlin.String#kotlin.Int/PointingToDeclaration/-kotlin -gems -docs/text/times.html
 number
