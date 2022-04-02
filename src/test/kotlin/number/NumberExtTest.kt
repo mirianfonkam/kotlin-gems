@@ -48,64 +48,64 @@ class NumberExtTest : DescribeSpec({
         }
     }
 
-    // Begin test cases
-    val negativeTestCase1: Int = -11
-    val negativeTestCase2: Long = -80L
-    val negativeTestCase3: Float = -1.55F
-    val negativeTestCase4: Double = -1.2
-    val negativeTestCase5: Short = -8
-    val positiveTestCase1: Int = 1
-    val positiveTestCase2: Long = 74L
-    val positiveTestCase3: Float = 3.25F
-    val positiveTestCase4: Double = 7.5
-    val positiveTestCase5: Short = 9
-    val zeroTestCase1: Int = 0
-    val zeroTestCase2: Long = 0
-    val zeroTestCase3: Float = 0.0F
-    val zeroTestCase4: Double = 0.0
-    val zeroTestCase5: Short = 0
-    val zeroTestCase6: Byte = 0
+    context("isPositive/isNegative/isZero") {
+        val negativeTestCase1: Int = -11; val negativeTestCase2: Long = -80L; val negativeTestCase3: Float = -1.55F
+        val negativeTestCase4: Double = -1.2; val negativeTestCase5: Short = -8
+        val positiveTestCase1: Int = 1; val positiveTestCase2: Long = 74L; val positiveTestCase3: Float = 3.25F
+        val positiveTestCase4: Double = 7.5; val positiveTestCase5: Short = 9
+        val zeroTestCase1: Int = 0; val zeroTestCase2: Long = 0; val zeroTestCase3: Float = 0.0F
+        val zeroTestCase4: Double = 0.0; val zeroTestCase5: Short = 0; val zeroTestCase6: Byte = 0
 
-    val negativeNumberList =
-        listOf(
-            negativeTestCase1, negativeTestCase2, negativeTestCase3, negativeTestCase4, negativeTestCase5
-        )
-    val positiveNumberList =
-        listOf(
-            positiveTestCase1, positiveTestCase2, positiveTestCase3, positiveTestCase4, positiveTestCase5
-        )
-    val zeroNumberList =
-        listOf(
-            zeroTestCase1, zeroTestCase2, zeroTestCase3, zeroTestCase4, zeroTestCase5, zeroTestCase6
-        )
+        val negativeNumberList =
+            listOf(
+                negativeTestCase1, negativeTestCase2, negativeTestCase3, negativeTestCase4, negativeTestCase5
+            )
+        val positiveNumberList =
+            listOf(
+                positiveTestCase1, positiveTestCase2, positiveTestCase3, positiveTestCase4, positiveTestCase5
+            )
+        val zeroNumberList =
+            listOf(
+                zeroTestCase1, zeroTestCase2, zeroTestCase3, zeroTestCase4, zeroTestCase5, zeroTestCase6
+            )
 
-    // End testCase
-
-    describe("isPositive") {
-        it("returns true if number is positive") {
-            positiveNumberList.forAll { it.isPositive().shouldBeTrue() }
+        describe("isPositive") {
+            it("returns true if number is positive") {
+                positiveNumberList.forAll { it.isPositive().shouldBeTrue() }
+            }
+            it("returns false for non-positive/negative numbers") {
+                negativeNumberList.forAll { it.isPositive().shouldBeFalse() }
+            }
         }
-        it("returns false for non-positive/negative numbers") {
-            negativeNumberList.forAll { it.isPositive().shouldBeFalse() }
+
+        describe("isNegative") {
+            it("returns true if number is negative") {
+                negativeNumberList.forAll { it.isNegative().shouldBeTrue() }
+            }
+            it("returns false for non-negative/positive numbers") {
+                positiveNumberList.forAll { it.isNegative().shouldBeFalse() }
+            }
+        }
+
+        describe("isZero") {
+            it("returns true if number is zero") {
+                zeroNumberList.forAll { it.isZero().shouldBeTrue() }
+            }
+            it("returns false for non-zero numbers") {
+                negativeNumberList.forAll { it.isZero().shouldBeFalse() }
+                positiveNumberList.forAll { it.isZero().shouldBeFalse() }
+            }
         }
     }
 
-    describe("isNegative") {
-        it("returns true if number is negative") {
-            negativeNumberList.forAll { it.isNegative().shouldBeTrue() }
+    describe("isInteger") {
+        it("returns true if number is a mathematical integer") {
+            val integerNumberList = listOf(1, 5.00, 1.0F)
+            integerNumberList.forAll { it.isInteger().shouldBeTrue() }
         }
-        it("returns false for non-negative/positive numbers") {
-            positiveNumberList.forAll { it.isNegative().shouldBeFalse() }
-        }
-    }
-
-    describe("isZero") {
-        it("returns true if number is zero") {
-            zeroNumberList.forAll { it.isZero().shouldBeTrue() }
-        }
-        it("returns false for non-zero numbers") {
-            negativeNumberList.forAll { it.isZero().shouldBeFalse() }
-            listOf(99999999, -1, 0.00001).forAll { it.isZero().shouldBeFalse() }
+        it("returns false for non-mathematical integers") {
+            val nonIntegerNumberList = listOf(1.000000001, 82627.00000000001, 1828.1000F)
+            nonIntegerNumberList.forAll { it.isInteger().shouldBeFalse() }
         }
     }
 })
