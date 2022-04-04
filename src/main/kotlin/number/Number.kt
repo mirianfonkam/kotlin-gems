@@ -49,7 +49,7 @@ fun Number.isZero(): Boolean {
 
 /**
  * It determines if a number is equivalent to mathematical integer number, a number with no fractional part.
- * Please note that it may return false positives if the number is approximately equal to an integer.
+ * <i>Please note that it may return false positives if the number is approximately equal to an integer.</i>
  *
  * @return true if the double or float number is equivalent to an integer number, false otherwise. It returns true for
  * all Int, Long, Short, Byte numbers.
