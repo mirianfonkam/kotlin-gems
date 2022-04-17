@@ -54,7 +54,7 @@ fun Number.isZero(): Boolean {
  * @return true if the double or float number is equivalent to an integer number, false otherwise. It returns true for
  * all Int, Long, Short, Byte numbers.
  */
-fun <T: Number> T.isInteger(): Boolean {
+fun Number.isInteger(): Boolean {
     return when (this) {
         is Double -> this == round(this)
         is Float -> this == round(this)
