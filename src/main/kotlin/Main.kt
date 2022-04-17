@@ -1,6 +1,8 @@
+import io.puts
+
 /**
  * @suppress
  */
 fun main() {
-    println("Kotlin Gems")
+    puts("Kotlin Gems")
 }

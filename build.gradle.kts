@@ -1,7 +1,7 @@
 
+import java.net.URL
 import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import java.net.URL
 
 plugins {
     kotlin("jvm") version "1.6.10"
@@ -18,8 +18,8 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    testImplementation("io.kotest:kotest-runner-junit5:5.2.1")
-    testImplementation("io.kotest:kotest-assertions-core:5.2.1")
+    testImplementation("io.kotest:kotest-runner-junit5:5.2.2")
+    testImplementation("io.kotest:kotest-assertions-core:5.2.2")
 }
 
 tasks.withType<Test>().configureEach {
