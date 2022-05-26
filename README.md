@@ -14,3 +14,9 @@ As similar as these slogans sound, there are some striking differences between t
 | [Kotest](https://kotest.io/)| Testing framework => 1. `Describe Spec` RSpec test style 2. Facilitates parameterized tests|
 | [DevDocs](https://github.com/freeCodeCamp/devdocs)| API Documentation Browser |
 
+## 📚 Learn More
+
+To find out more about the differences between Kotlin and Ruby, you can check out:
+
+- [Kotlin for Rubyists by Ivo Anjo](https://ivoanjo.me/blog/2019/03/05/kotlin-for-rubyists/)
+- [Ruby and Kotlin Snippets Cheatsheet](https://programming-idioms.org/cheatsheet/Ruby/Kotlin)
