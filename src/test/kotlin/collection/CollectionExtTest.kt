@@ -14,6 +14,10 @@ class CollectionExtTest : DescribeSpec({
                 row(listOf(0,1,2), 3, listOf(listOf(0,1,2))),
                 row(listOf(0,1,2), 1, listOf(listOf(0), listOf(1), listOf(2))),
                 row(listOf(0,1,2), 0, listOf()),
+                row(listOf(0,1,2,3,4), 3, listOf(listOf(0, 1, 2), listOf(0, 1, 3), listOf(0, 1, 4),
+                                             listOf(0, 2, 3), listOf(0, 2, 4), listOf(0, 3, 4),
+                                             listOf(1, 2, 3), listOf(1, 2, 4), listOf(1, 3, 4), listOf(2, 3, 4))
+                )
             ) { listReceiver: List<Int>, n: Int, result: List<List<Int>> ->
                 listReceiver.combination(n) shouldBe result
             }
