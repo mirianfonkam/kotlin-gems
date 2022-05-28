@@ -17,8 +17,12 @@ class CollectionExtTest : DescribeSpec({
                 row(listOf(0,1,2,3,4), 3, listOf(listOf(0, 1, 2), listOf(0, 1, 3), listOf(0, 1, 4),
                                              listOf(0, 2, 3), listOf(0, 2, 4), listOf(0, 3, 4),
                                              listOf(1, 2, 3), listOf(1, 2, 4), listOf(1, 3, 4), listOf(2, 3, 4))
-                )
-            ) { listReceiver: List<Int>, n: Int, result: List<List<Int>> ->
+                ),
+                row(listOf("BRA","USA","NGA", "ENG"), 2, listOf(listOf("BRA","USA"), listOf("BRA","NGA"),
+                                                            listOf("BRA", "ENG"), listOf("USA", "NGA"),
+                                                            listOf("USA", "ENG"), listOf("NGA", "ENG"))
+                ),
+            ) { listReceiver: List<Any>, n: Int, result: List<List<Any>> ->
                 listReceiver.combination(n) shouldBe result
             }
         }
